@@ -1,6 +1,9 @@
 <template lang="html">
-  <div>
-    <p>Neighbours: <span v-for="borderingCountry in borders"> <a v-on:click="updateCountry(borderingCountry)">{{borderingCountry}}</a>&nbsp;</span></p>
+  <div v-if="borders.length > 0">
+    <p>Neighbours: <span v-for="(borderingCountry, index) in borders">
+      <span v-if="index !=0">, </span>
+      <a v-on:click="updateCountry(borderingCountry)">{{borderingCountry}}</a>
+    </span></p>
   </div>
 
 </template>
@@ -29,4 +32,18 @@ export default {
 </script>
 
 <style lang="css" scoped>
+
+p {
+  font-size: 1.5rem;
+}
+
+a {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+a:hover {
+  color: #DBE4EE;
+}
+
 </style>

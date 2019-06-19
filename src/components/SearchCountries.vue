@@ -1,5 +1,5 @@
 <template lang="html">
-  <input type="text" v-model="search" @input="searchCountry">
+  <input id="search" placeholder="Search..." type="text" v-model="search" @input="searchCountry">
 </template>
 
 <script>
@@ -25,4 +25,16 @@ export default {
 </script>
 
 <style lang="css" scoped>
+
+#search {
+  background-color: #81A4CD;
+  font-weight: bold;
+  border: none;
+  margin: 3vw 0;
+  padding: 0.4vw;
+  font-size: 2rem;
+  font-family: inherit;
+  text-align: center;
+}
+
 </style>
