@@ -4,12 +4,11 @@
       <h1>World Facts</h1>
     </header>
     <div class="search-bar">
-      <search-countries :countries="countries"></search-countries>
-      <random-country :countries="countries"></random-country>
+      <search-countries :countries="countries" />
+      <random-country :countries="countries" />
     </div>
-
     <!-- <countries-select :countries="countries"></countries-select> -->
-    <country-details :country="selectedCountry" :countries="countries"></country-details>
+    <country-details :country="selectedCountry" :countries="countries" />
   </div>
 </template>
 

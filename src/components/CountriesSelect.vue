@@ -1,5 +1,6 @@
 <template lang="html">
   <select @change="handleChange" v-model="selectedCountry">
+    <option value="">Select a country...</option>
     <option v-for="(country, index) in countries" :value="country" :key="index">{{ country.name }}</option>
   </select>
 </div>
@@ -14,7 +15,7 @@ export default {
   props: ['countries'],
   data() {
     return {
-      selectedCountry: null
+      selectedCountry: ""
     }
   },
   methods: {
