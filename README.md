@@ -5,6 +5,6 @@ An app which displays country data from an API, built with multiple Vue componen
 Features include -  
 * Search bar with autocomplete
 * Random country selection
-* View neighbouring countries.
+* View neighbouring countries
 
 ![screenshot](screenshots/screenshot.png)
