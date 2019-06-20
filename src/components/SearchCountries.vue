@@ -35,6 +35,7 @@ export default {
   font-size: 2rem;
   font-family: inherit;
   text-align: center;
+  margin-left: 5vw;
 }
 
 </style>

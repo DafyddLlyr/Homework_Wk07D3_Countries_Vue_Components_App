@@ -7,6 +7,7 @@
       <search-countries :countries="countries"></search-countries>
       <random-country :countries="countries"></random-country>
     </div>
+
     <!-- <countries-select :countries="countries"></countries-select> -->
     <country-details :country="selectedCountry" :countries="countries"></country-details>
   </div>

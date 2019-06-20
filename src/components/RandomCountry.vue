@@ -22,8 +22,8 @@ export default {
 .fas {
   color: #F17300;
   font-size: 2.5rem;
-  margin-left: 2vw;
-  cursor: pointer;  
+  width: 5vw;
+  cursor: pointer;
 }
 
 </style>
