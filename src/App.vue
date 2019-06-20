@@ -1,9 +1,12 @@
 <template>
   <div id="app">
     <header>
-      <h1>Vue Countries API App</h1>
+      <h1>World Facts</h1>
     </header>
-    <search-countries :countries="countries"></search-countries>
+    <div class="search-bar">
+      <search-countries :countries="countries"></search-countries>
+      <random-country :countries="countries"></random-country>
+    </div>
     <!-- <countries-select :countries="countries"></countries-select> -->
     <country-details :country="selectedCountry" :countries="countries"></country-details>
   </div>
@@ -14,6 +17,7 @@ import { eventBus } from './main.js'
 import CountriesSelect from './components/CountriesSelect.vue';
 import CountryDetails from './components/CountryDetails.vue';
 import SearchCountries from './components/SearchCountries.vue';
+import RandomCountry from './components/RandomCountry.vue';
 
 export default {
   name: 'app',
@@ -27,7 +31,7 @@ export default {
     fetch('https://restcountries.eu/rest/v2/all')
     .then(response => response.json())
     .then(countries => this.countries = countries)
-    eventBus.$on(['country-selected', 'search'], (country) => {
+    eventBus.$on(['country-selected', 'search', 'random-country'], (country) => {
       this.selectedCountry = country;
     })
     eventBus.$on('country-borders', borderingCountry => {
@@ -37,7 +41,8 @@ export default {
   components: {
     'countries-select': CountriesSelect,
     'country-details': CountryDetails,
-    'search-countries': SearchCountries
+    'search-countries': SearchCountries,
+    'random-country': RandomCountry
   }
 }
 </script>
@@ -68,9 +73,18 @@ body {
 header {
   background-color: #054A91;
   width: 100%;
+
 }
 
 h1 {
   color: #F17300;
+  font-size: 3rem;
+  margin: 1vw;
 }
+
+.search-bar {
+  display: flex;
+  align-items: center;
+}
+
 </style>

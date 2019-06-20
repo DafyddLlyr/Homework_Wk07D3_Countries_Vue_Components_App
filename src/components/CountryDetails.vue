@@ -54,7 +54,7 @@ h3 {
 }
 
 p {
-  font-size: 1.5rem;
+  font-size: 1.5rem;  
 }
 
 </style>
